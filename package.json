@@ -1,29 +1,26 @@
 {
   "name": "rectangle",
   "version": "1.0.0",
-  "description": "计算矩形的周长和面积",
+  "description": "计算矩形的面积和周长",
   "main": "rectangle.js",
-  "dependencies": {
-    "grunt-eslint": "^21.0.0",
-    "grunt-htmlhint": "^0.9.13"
-  },
-  "devDependencies": {
-    "grunt": "^1.0.3",
-    "grunt-contrib-csslint": "^2.0.0",
-    "grunt-contrib-htmlmin": "^3.0.0",
-    "grunt-mocha": "^1.2.0"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "grunt lint"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yaojingo728/rectangle.git"
+    "url": "git+https://github.com/wangding/rectangle.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "wangding",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yaojingo728/rectangle/issues"
+    "url": "https://github.com/wangding/rectangle/issues"
   },
-  "homepage": "https://github.com/yaojingo728/rectangle#readme"
+  "homepage": "https://github.com/wangding/rectangle#readme",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-csslint": "^2.0.0",
+    "grunt-eslint": "^21.0.0",
+    "grunt-htmlhint": "^0.9.13",
+    "grunt-mocha": "^1.2.0"
+  }
 }

@@ -1,49 +1,29 @@
+/* global module: true */
 module.exports = function (grunt) {
   grunt.initConfig({
     eslint: {
       options: {
-                configFile: '.eslintrc.json'
-          
+        configFile: '.eslintrc.json'    
       },
-        target: ['*.js']
-        
+      target: ['*.js']    
     },
-  csslint: {
-    options: {
-              csslintrc: '.csslintrc'
-          
+    csslint: {
+      options: {
+        csslintrc: '.csslintrc'      
+      },
+      src: '*.css'     
     },
-        src: '*.css'
-        
-  },
-  htmlhint: {
-    options: {
-              htmlhintrc: '.htmlhintrc'
-          
-    },
-          src: '*.html'
-                
-  },
-  mocha: {
-    test: {
-              src: ['test/index.html'],
-                    
-    },
-    options: {
-              run: true,
-                      reporter: 'Spec'
-                              
-    }
-        
-  },  
+    htmlhint: {
+      options: {
+        htmlhintrc: '.htmlhintrc'      
+      },
+      src: '*.html'            
+    }  
   });
 
-    grunt.loadNpmTasks('grunt-contrib-csslint');
-      grunt.loadNpmTasks('grunt-htmlhint');
-        grunt.loadNpmTasks('grunt-eslint');
-          grunt.loadNpmTasks('grunt-mocha');
+  grunt.loadNpmTasks('grunt-contrib-csslint');
+  grunt.loadNpmTasks('grunt-htmlhint');
+  grunt.loadNpmTasks('grunt-eslint');
 
-    grunt.registerTask('default', ['htmlhint', 'csslint', 'eslint']);
-      grunt.registerTask('default',['mocha']);
-           
+  grunt.registerTask('default', ['htmlhint', 'csslint', 'eslint']);
 };
